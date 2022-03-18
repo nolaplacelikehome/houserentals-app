@@ -1,0 +1,49 @@
+@use "../../styles/mixins" as query;
+
+.desktop-nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 30px 0;
+    padding: 0 15px;
+
+    .name-container {
+        display: flex;
+        float: left;
+
+        .nav-logo {
+            color: #CB3B1B;
+        }
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        list-style: none;
+        @include query.for-mobile-only {
+            display: none;
+        }
+        
+        li:not(:first-child) {
+            padding-left: 8px;
+            @include query.for-tablet-only {
+                padding-left: 25px;
+            }
+            @include query.for-desktop-only {
+                padding-left: 35px;
+            }
+        }
+        
+        * {
+            text-decoration: none;  
+            color: black; 
+            transition: 0.3s;
+        }
+
+        *:hover {
+            color: #CB3B1B;
+        }
+    }
+}

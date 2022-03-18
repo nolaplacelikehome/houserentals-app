@@ -1,0 +1,49 @@
+.desktop-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 30px 0;
+  padding: 0 15px;
+}
+.desktop-nav-bar .name-container {
+  display: flex;
+  float: left;
+}
+.desktop-nav-bar .name-container .nav-logo {
+  color: #CB3B1B;
+}
+.desktop-nav-bar .nav-links {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  list-style: none;
+}
+@media screen and (max-width: 575px) {
+  .desktop-nav-bar .nav-links {
+    display: none;
+  }
+}
+.desktop-nav-bar .nav-links li:not(:first-child) {
+  padding-left: 8px;
+}
+@media screen and (min-width: 576px) {
+  .desktop-nav-bar .nav-links li:not(:first-child) {
+    padding-left: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .desktop-nav-bar .nav-links li:not(:first-child) {
+    padding-left: 35px;
+  }
+}
+.desktop-nav-bar .nav-links * {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.desktop-nav-bar .nav-links *:hover {
+  color: #CB3B1B;
+}
+
+/*# sourceMappingURL=DesktopNav.css.map */
