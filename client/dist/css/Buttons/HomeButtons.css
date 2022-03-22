@@ -1,0 +1,54 @@
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn-container .btn {
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.btn-container .btn * {
+  text-decoration: none;
+  color: black;
+}
+.btn-container .btn-filled {
+  background-color: #CB3B1B;
+  padding: 8px 16px;
+  margin-right: 15px;
+}
+@media screen and (min-width: 576px) {
+  .btn-container .btn-filled {
+    padding: 16px 32px;
+  }
+}
+.btn-container .btn-filled * {
+  color: white;
+}
+.btn-container .btn-filled:hover {
+  background-color: #BC3719;
+}
+.btn-container .btn-filled:hover * {
+  color: white;
+}
+.btn-container .btn-outlined {
+  border: 3px solid #CB3B1B;
+  background-color: white;
+  padding: 7px 8px;
+}
+@media screen and (min-width: 576px) {
+  .btn-container .btn-outlined {
+    padding: 13px 22px;
+  }
+}
+.btn-container .btn-outlined:hover {
+  background-color: #CB3B1B;
+}
+.btn-container .btn-outlined:hover * {
+  color: white;
+}
+
+/*# sourceMappingURL=HomeButtons.css.map */

@@ -1,0 +1,82 @@
+@use "../mixins" as query;
+
+.booking-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: small;
+	border-radius: 6px;
+	margin-bottom: 75px;
+	padding: 8px 11px;
+	background-color: white;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	@include query.for-tablet-only {
+		padding: 16px 11px;
+	}
+
+	.item-container {
+		display: flex;
+		position: relative;
+
+		.calendar-icon {
+			font-size: small;
+			margin-right: 10px;
+			@include query.for-tablet-only {
+				font-size: large;
+			}
+		}
+
+		.start-date {
+			margin-right: 8px;
+			@include query.for-tablet-only {
+				font-size: large;
+				margin-right: 10px;
+			}
+		}
+
+		.end-date {
+			margin-right: 5px;
+			@include query.for-tablet-only {
+				font-size: large;
+				margin-right: 10px;
+			}
+		}
+	}
+
+		.start-calendar {
+			position: absolute;
+			max-width: none;
+			z-index: 1;
+			top: 40px;
+			left: -20px;
+			@include query.for-tablet-only {
+				top: 60px;
+				left: -60px;
+			}
+		}
+
+		.end-calendar {
+			position: absolute;
+			top: 40px;
+			right: -120px;
+			z-index: 1;
+			@include query.for-tablet-only {
+				top: 60px;
+				left: 0px;
+			}
+		}
+
+		.vertical-line {
+		border-left: 3px solid #CB3B1B;
+		height: 30px;
+		margin-right: 8px;
+		@include query.for-tablet-only {
+				margin-right: 10px;
+			}
+		}
+	}
+
+
+
+
+

@@ -1,0 +1,84 @@
+.booking-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  border-radius: 6px;
+  margin-bottom: 75px;
+  padding: 8px 11px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (min-width: 576px) {
+  .booking-card {
+    padding: 16px 11px;
+  }
+}
+.booking-card .item-container {
+  display: flex;
+  position: relative;
+}
+.booking-card .item-container .calendar-icon {
+  font-size: small;
+  margin-right: 10px;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .item-container .calendar-icon {
+    font-size: large;
+  }
+}
+.booking-card .item-container .start-date {
+  margin-right: 8px;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .item-container .start-date {
+    font-size: large;
+    margin-right: 10px;
+  }
+}
+.booking-card .item-container .end-date {
+  margin-right: 5px;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .item-container .end-date {
+    font-size: large;
+    margin-right: 10px;
+  }
+}
+.booking-card .start-calendar {
+  position: absolute;
+  max-width: none;
+  z-index: 1;
+  top: 40px;
+  left: -20px;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .start-calendar {
+    top: 60px;
+    left: -60px;
+  }
+}
+.booking-card .end-calendar {
+  position: absolute;
+  top: 40px;
+  right: -120px;
+  z-index: 1;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .end-calendar {
+    top: 60px;
+    left: 0px;
+  }
+}
+.booking-card .vertical-line {
+  border-left: 3px solid #CB3B1B;
+  height: 30px;
+  margin-right: 8px;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .vertical-line {
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=BookingCard.css.map */
