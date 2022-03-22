@@ -9,9 +9,13 @@
 .desktop-nav-bar .name-container {
   display: flex;
   float: left;
+  gap: 20px;
 }
 .desktop-nav-bar .name-container .nav-logo {
   color: #CB3B1B;
+}
+.desktop-nav-bar .name-container .nav-name {
+  font-size: x-large;
 }
 .desktop-nav-bar .nav-links {
   display: flex;

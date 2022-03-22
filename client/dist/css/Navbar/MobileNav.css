@@ -12,9 +12,13 @@
   display: flex;
   float: left;
   margin-top: 20px;
+  gap: 30px;
 }
 .mobile-nav-bar .name-container .nav-logo {
   color: #CB3B1B;
+}
+.mobile-nav-bar .name-container .nav-name {
+  font-size: larger;
 }
 .mobile-nav-bar nav {
   position: absolute;
