@@ -1,7 +1,7 @@
 @use "../mixins" as query;
 
 .first-section-container {
-	margin: 60px 0;
+	margin: 60px 0 100px 0;
 	padding: 0 20px;
 	gap: 20px;
 	@include query.for-tablet-only {

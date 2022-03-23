@@ -28,6 +28,8 @@
 
 		.start-date {
 			margin-right: 8px;
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
 			@include query.for-tablet-only {
 				font-size: large;
 				margin-right: 10px;
@@ -36,6 +38,8 @@
 
 		.end-date {
 			margin-right: 5px;
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
 			@include query.for-tablet-only {
 				font-size: large;
 				margin-right: 10px;
@@ -57,7 +61,7 @@
 
 		.end-calendar {
 			position: absolute;
-			top: 40px;
+			top: 45px;
 			right: -120px;
 			z-index: 1;
 			@include query.for-tablet-only {

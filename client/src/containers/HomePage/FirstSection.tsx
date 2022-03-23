@@ -7,7 +7,7 @@ import frontHome from "../../../assets/front-home.jpg";
 
 export default function FirstSection() {
 	return (
-		<div className="first-section-container">
+		<div className="first-section-container" id="homepage">
 			<div className="introduction-container">
 				<h3>Rent or List your Home</h3>
 				<div className="introduction">

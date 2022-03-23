@@ -33,7 +33,7 @@ export default function BookingCard() {
 
 
 	return (
-		<div className='booking-card'>
+		<div className='booking-card' id='booking-card'>
 			<div className="item-container">
 				<span className='calendar-icon'><FontAwesomeIcon icon={faCalendarAlt} /></span>
 				<span className="start-date" onClick={onStartClick}>Starting Date</span>

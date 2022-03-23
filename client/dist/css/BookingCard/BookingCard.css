@@ -29,6 +29,8 @@
 }
 .booking-card .item-container .start-date {
   margin-right: 8px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 @media screen and (min-width: 576px) {
   .booking-card .item-container .start-date {
@@ -38,6 +40,8 @@
 }
 .booking-card .item-container .end-date {
   margin-right: 5px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 @media screen and (min-width: 576px) {
   .booking-card .item-container .end-date {
@@ -60,7 +64,7 @@
 }
 .booking-card .end-calendar {
   position: absolute;
-  top: 40px;
+  top: 45px;
   right: -120px;
   z-index: 1;
 }
