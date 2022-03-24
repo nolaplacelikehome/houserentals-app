@@ -3,6 +3,8 @@ import { motion, useCycle } from 'framer-motion';
 import Navigation from './Navigation';
 import MenuToggle from './MenuToggle';
 import { useDimensions } from './use-dimensions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 import "../../../dist/css/Navbar/MobileNav.css";
 
@@ -34,7 +36,7 @@ export default function MobileNav() {
   return (
     <div className="mobile-nav-bar">
       <div className="name-container">
-        <div className="nav-logo">L</div>
+        <div className="nav-logo"><FontAwesomeIcon icon={faHome} color='#CB3B1B' size="lg" /></div>
         <div className="nav-name">Home Rentals</div>
       </div>
       <motion.nav

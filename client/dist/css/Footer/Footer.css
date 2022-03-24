@@ -1,0 +1,12 @@
+.footer-container {
+  display: flex;
+  min-width: 100%;
+  min-height: 250px;
+  background-color: #F6F5F4;
+  padding: 7px 0 1px 0;
+}
+.footer-container .info-container {
+  display: flex;
+}
+
+/*# sourceMappingURL=Footer.css.map */

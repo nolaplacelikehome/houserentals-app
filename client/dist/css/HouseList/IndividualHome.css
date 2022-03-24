@@ -1,0 +1,96 @@
+/** In card design make sure all the images have the same width and height */
+.individual-home {
+  width: 300px;
+  height: 425px;
+  box-shadow: 0 1.3px 17px -2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  margin: 1px 1px 8px 1px;
+}
+
+.home-thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.home-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.home-name {
+  font-size: large;
+  font-weight: bold;
+  margin: 1px 0;
+}
+
+.prices-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  margin: 3px 0 5px 0;
+}
+
+.daily-price {
+  font-size: small;
+  margin-right: 3px;
+}
+
+.monthly-price {
+  font-size: small;
+}
+
+.icon {
+  color: grey;
+  font-size: small;
+  margin: 0 4px 0 10px;
+}
+
+.home-info-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.home-detail {
+  display: flex;
+  align-items: center;
+}
+
+.home-info {
+  color: grey;
+  font-size: x-small;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  display: flex;
+  background-color: #CB3B1B;
+  margin: 2px 0 10px 0;
+}
+
+.rent-button {
+  min-width: 20px;
+  margin-top: 5px;
+  padding: 16px 32px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #CB3B1B;
+  color: white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.rent-button:hover {
+  background-color: white;
+  color: black;
+  border: 3px solid #CB3B1B;
+  padding: 13px 29px;
+}
+
+/*# sourceMappingURL=IndividualHome.css.map */

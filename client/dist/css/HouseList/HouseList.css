@@ -1,0 +1,25 @@
+.our-homes-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  margin-bottom: 100px;
+}
+
+.homes-title {
+  font-size: x-large;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.homes-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+/*# sourceMappingURL=HouseList.css.map */
