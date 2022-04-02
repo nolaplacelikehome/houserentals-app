@@ -23,6 +23,9 @@
     margin: 0;
   }
 }
+.first-section-container .introduction-container .introduction {
+  max-width: 350px;
+}
 .first-section-container .introduction-container h3 {
   margin-bottom: 15px;
 }

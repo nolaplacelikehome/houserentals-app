@@ -8,14 +8,9 @@ import HomePage from './containers/HomePage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="rent" element={<HomePage />} />
-        <Route path="list" element={<HomePage />} />
-        <Route path="signin" element={<HomePage />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <HomePage />
+    </>
   );
 }
 

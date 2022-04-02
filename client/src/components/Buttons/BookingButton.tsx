@@ -4,6 +4,6 @@ import { Link } from 'react-router-dom';
 
 export default function BookingButton() {
 	return (
-		<button className='booking-button'><Link to="rent">Rent Now</Link></button>
+		<button className='booking-button'><a href="#">Rent Now</a></button>
 	)
 }

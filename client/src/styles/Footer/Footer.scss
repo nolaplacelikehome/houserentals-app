@@ -1,11 +1,58 @@
+@use "../mixins" as query;
+
 .footer-container {
 	display: flex;
+	justify-content: flex-start;
+	gap: 10px;
 	min-width: 100%;
-	min-height: 250px;
+	min-height: 200px;
 	background-color: #F6F5F4;
 	padding: 7px 0 1px 0;
-
-	.info-container {
-		display: flex;
+	@include query.for-tablet-only {
+		gap: 200px;
+		min-height: 250px;
 	}
+
+	.company-container {
+		max-width: 200px;
+		margin-left: 20px;
+		@include query.for-tablet-only {
+			max-width: 300px;
+		}
+		.title {
+			display: flex;
+			gap: 10px;
+			.footer-icon {
+				size: small;
+				margin-right: 10px;
+				@include query.for-tablet-only {
+					size: "medium";
+				}
+			}
+		}
+	}
+
+	.link-container {
+		display: flex;
+		flex-direction: column;
+		h4 {
+			padding-bottom: 10px;
+		}
+		ul {
+			list-style: none;
+			* {
+				text-decoration: none;
+				color: black;
+				padding-bottom: 5px;
+				@include query.for-tablet-only {
+					padding-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	.social-container {
+		margin-bottom: 10px;
+	}
+	
 }

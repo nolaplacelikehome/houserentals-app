@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'; 
 
 let variants = {
   open: {
@@ -31,7 +30,7 @@ export default function MenuNavItem({ path, name }: ItemProps) {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 1 }}
     >
-      <Link to={path}>{name}</Link>
+      <a href={path}>{name}</a>
     </motion.li>
   );
 }
