@@ -1,9 +1,7 @@
 $breakpoint-mobile: 576px;
 $breakpoint-tablet: 1200px;
-$breakpoint-desktop: 2400px;
 
-// || MEDIA QUERY MIXINS
-
+// || MEDIA QUERIES
 
 @mixin for-mobile-only {
   @media screen and (max-width: 575px) { @content; }
@@ -15,4 +13,19 @@ $breakpoint-desktop: 2400px;
 
 @mixin for-desktop-only {
   @media screen and (min-width: $breakpoint-tablet) { @content; }
+}
+
+@mixin before($content: '', $position: absolute) {
+  content: $content;
+  position: $position;
+}
+
+@mixin hover-lift() {
+  transform: transform 350ms ease-in-out;
+  box-shadow: 0 .25em .5em 0 rgba(black, .2);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 }

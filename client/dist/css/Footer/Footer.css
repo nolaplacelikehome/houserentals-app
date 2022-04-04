@@ -1,15 +1,15 @@
 .footer-container {
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
+  justify-content: space-between;
   min-width: 100%;
   min-height: 200px;
   background-color: #F6F5F4;
-  padding: 7px 0 1px 0;
+  padding: 7px 7px 1px 0;
 }
 @media screen and (min-width: 576px) {
   .footer-container {
-    gap: 200px;
+    justify-content: flex-start;
+    gap: 100px;
     min-height: 250px;
   }
 }
@@ -22,16 +22,18 @@
     max-width: 300px;
   }
 }
-.footer-container .company-container .title {
+.footer-container .title {
   display: flex;
   gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
 }
-.footer-container .company-container .title .footer-icon {
+.footer-container .footer-icon {
   size: small;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 @media screen and (min-width: 576px) {
-  .footer-container .company-container .title .footer-icon {
+  .footer-container .footer-icon {
     size: "medium";
   }
 }
@@ -47,6 +49,7 @@
 }
 .footer-container .link-container ul * {
   text-decoration: none;
+  min-width: 43.3px;
   color: black;
   padding-bottom: 5px;
 }
@@ -56,7 +59,21 @@
   }
 }
 .footer-container .social-container {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-container .social-container h4 {
+  padding-bottom: 10px;
+}
+.footer-container .social-container a {
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: black;
+}
+@media screen and (min-width: 576px) {
+  .footer-container .social-container a {
+    padding-bottom: 15px;
+  }
 }
 
 /*# sourceMappingURL=Footer.css.map */
