@@ -23,7 +23,7 @@
   font-size: larger;
 }
 .mobile-nav-bar nav {
-  position: absolute;
+  position: sticky;
   top: 0;
   right: 0px;
   bottom: 0;
@@ -40,7 +40,7 @@
 }
 .mobile-nav-bar nav ul {
   padding: 25px;
-  position: absolute;
+  position: fixed;
   top: 75px;
   width: 150px;
 }
