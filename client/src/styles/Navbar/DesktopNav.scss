@@ -11,6 +11,7 @@
 
     .name-container {
         display: flex;
+        align-items: baseline;
         float: left;
         gap: 20px;
 
@@ -20,6 +21,7 @@
 
         .nav-name {
             font-size: x-large;
+            font-weight: bolder;
         }
     }
     

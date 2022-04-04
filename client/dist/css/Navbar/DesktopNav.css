@@ -9,6 +9,7 @@
 }
 .desktop-nav-bar .name-container {
   display: flex;
+  align-items: baseline;
   float: left;
   gap: 20px;
 }
@@ -17,6 +18,7 @@
 }
 .desktop-nav-bar .name-container .nav-name {
   font-size: x-large;
+  font-weight: bolder;
 }
 .desktop-nav-bar .nav-links {
   display: flex;
