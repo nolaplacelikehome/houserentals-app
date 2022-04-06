@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function BookingCard() {
+export default function MobileCard() {
 	return (
 		<div></div>
-	);
+	)
 }

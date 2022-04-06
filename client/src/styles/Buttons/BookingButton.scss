@@ -1,6 +1,10 @@
 @use "../mixins" as query;
 
 .booking-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
 	border: none;
 	font-size: 16px;
 	cursor: pointer;
@@ -9,8 +13,9 @@
 	padding: 8px 16px;
 	@include query.for-tablet-only {
 		font-weight: bold;
-		padding: 16px 32px;
+		padding: 16px 50px;
 	}
+	
 
 	* {
 		text-decoration: none;

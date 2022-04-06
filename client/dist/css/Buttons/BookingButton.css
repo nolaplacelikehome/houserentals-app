@@ -1,4 +1,8 @@
 .booking-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
   border: none;
   font-size: 16px;
   cursor: pointer;
@@ -9,7 +13,7 @@
 @media screen and (min-width: 576px) {
   .booking-button {
     font-weight: bold;
-    padding: 16px 32px;
+    padding: 16px 50px;
   }
 }
 .booking-button * {

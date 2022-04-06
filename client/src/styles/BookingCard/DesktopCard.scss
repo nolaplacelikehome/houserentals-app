@@ -2,21 +2,28 @@
 
 .booking-card {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	font-size: small;
 	border-radius: 6px;
-	margin-bottom: 75px;
-	padding: 8px 11px;
+	padding: 30px 11px;
 	background-color: white;
 	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	@include query.for-tablet-only {
-		padding: 16px 11px;
+	@include query.for-large-only {
+		justify-content: center;
 	}
 
 	.item-container {
 		display: flex;
+		position: absolute;
+		top: 0;
+		height: 100%;
 		position: relative;
+		margin-right: 20px;
+		transition: all;
+		&:hover {
+			outline: 2px solid black;
+		}
 
 		.calendar-icon {
 			font-size: small;
@@ -47,36 +54,28 @@
 		}
 	}
 
+	.destination-container {
+		@extend .item-container;
+		border: none; 
+		border-width: 0; 
+		box-shadow: none;
+		
+	}
+
 		.start-calendar {
 			position: absolute;
 			max-width: none;
 			z-index: 1;
 			top: 40px;
 			left: -20px;
-			@include query.for-tablet-only {
-				top: 60px;
-				left: -60px;
-			}
 		}
 
 		.end-calendar {
 			position: absolute;
-			top: 45px;
+			max-width: none;
+			top: 40px;
 			right: -120px;
 			z-index: 1;
-			@include query.for-tablet-only {
-				top: 60px;
-				left: 0px;
-			}
-		}
-
-		.vertical-line {
-		border-left: 3px solid #CB3B1B;
-		height: 30px;
-		margin-right: 8px;
-		@include query.for-tablet-only {
-				margin-right: 10px;
-			}
 		}
 	}
 

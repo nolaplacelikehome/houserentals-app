@@ -1,0 +1,79 @@
+.booking-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: small;
+  border-radius: 6px;
+  padding: 30px 11px;
+  background-color: white;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (min-width: 1600px) {
+  .booking-card {
+    justify-content: center;
+  }
+}
+.booking-card .item-container, .booking-card .destination-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  position: relative;
+  margin-right: 20px;
+  transition: all;
+}
+.booking-card .item-container:hover, .booking-card .destination-container:hover {
+  outline: 2px solid black;
+}
+.booking-card .item-container .calendar-icon, .booking-card .destination-container .calendar-icon {
+  font-size: small;
+  margin-right: 10px;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .item-container .calendar-icon, .booking-card .destination-container .calendar-icon {
+    font-size: large;
+  }
+}
+.booking-card .item-container .start-date, .booking-card .destination-container .start-date {
+  margin-right: 8px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .item-container .start-date, .booking-card .destination-container .start-date {
+    font-size: large;
+    margin-right: 10px;
+  }
+}
+.booking-card .item-container .end-date, .booking-card .destination-container .end-date {
+  margin-right: 5px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+@media screen and (min-width: 576px) {
+  .booking-card .item-container .end-date, .booking-card .destination-container .end-date {
+    font-size: large;
+    margin-right: 10px;
+  }
+}
+.booking-card .destination-container {
+  border: none;
+  border-width: 0;
+  box-shadow: none;
+}
+.booking-card .start-calendar {
+  position: absolute;
+  max-width: none;
+  z-index: 1;
+  top: 40px;
+  left: -20px;
+}
+.booking-card .end-calendar {
+  position: absolute;
+  max-width: none;
+  top: 40px;
+  right: -120px;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=DesktopCard.css.map */

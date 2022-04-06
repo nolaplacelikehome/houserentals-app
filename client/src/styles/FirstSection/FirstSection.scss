@@ -30,6 +30,13 @@
 		}
 	}
 
+	.desktop-card {
+		position: relative;
+		top: 150px;
+		left: 60px;
+		z-index: 1;
+	}
+
 	.img-container {
 		width: 100%;
 		margin: 0 auto;
