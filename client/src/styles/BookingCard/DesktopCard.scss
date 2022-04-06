@@ -15,15 +15,10 @@
 
 	.item-container {
 		display: flex;
-		position: absolute;
-		top: 0;
-		height: 100%;
 		position: relative;
 		margin-right: 20px;
 		transition: all;
-		&:hover {
-			outline: 2px solid black;
-		}
+	
 
 		.calendar-icon {
 			font-size: small;
@@ -56,10 +51,16 @@
 
 	.destination-container {
 		@extend .item-container;
-		border: none; 
-		border-width: 0; 
-		box-shadow: none;
-		
+		input {
+			color: black;
+			border: none;
+			&:focus {
+			outline: none;
+			}	
+			&::placeholder {
+				color: black;
+			}
+		}
 	}
 
 		.start-calendar {

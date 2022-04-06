@@ -9,7 +9,7 @@ const homes = [
 		<Home name={"Our home"} dailyPrice={"83"} monthlyPrice={"2500"} bedrooms={"4"} bathrooms={"2"} />,
 		<Home name={"Our home"} dailyPrice={"83"} monthlyPrice={"2500"} bedrooms={"4"} bathrooms={"2"} />, 
 		<Home name={"Our home"} dailyPrice={"83"} monthlyPrice={"2500"} bedrooms={"4"} bathrooms={"2"} />, 
-		<Home name={"Our home"} dailyPrice={"83"} monthlyPrice={"2500"} bedrooms={"4"} bathrooms={"2"} /> 
+		<Home name={"Our home"} dailyPrice={"83"} monthlyPrice={"2500"} bedrooms={"4"} bathrooms={"2"} />,
 		];
 
 export default function HousesList() {

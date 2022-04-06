@@ -15,15 +15,9 @@
 }
 .booking-card .item-container, .booking-card .destination-container {
   display: flex;
-  position: absolute;
-  top: 0;
-  height: 100%;
   position: relative;
   margin-right: 20px;
   transition: all;
-}
-.booking-card .item-container:hover, .booking-card .destination-container:hover {
-  outline: 2px solid black;
 }
 .booking-card .item-container .calendar-icon, .booking-card .destination-container .calendar-icon {
   font-size: small;
@@ -56,10 +50,15 @@
     margin-right: 10px;
   }
 }
-.booking-card .destination-container {
+.booking-card .destination-container input {
+  color: black;
   border: none;
-  border-width: 0;
-  box-shadow: none;
+}
+.booking-card .destination-container input:focus {
+  outline: none;
+}
+.booking-card .destination-container input::placeholder {
+  color: black;
 }
 .booking-card .start-calendar {
   position: absolute;
