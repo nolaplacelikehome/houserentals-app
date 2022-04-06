@@ -1,22 +1,22 @@
 export let MenuItems: { name: string, url: string, id: string }[] = [
   {
     name: "Home",
-    url: "/",
+    url: "#home",
     id: "1",
   },
   {
     name: "Rent",
-    url: "rent",
+    url: "#booking-card",
     id: "2",
   },
   {
     name: "List",
-    url: "list",
+    url: "#booking-card",
     id: "3",
   },
   {
     name: "Sign In",
-    url: "signin",
+    url: "#signin",
     id: "4",
   },
 ]
