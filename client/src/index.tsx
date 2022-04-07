@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import '../dist/css/App.css';
@@ -14,4 +14,6 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const container = document.getElementById('app')!;
+const root = createRoot(container);
+root.render(<App />);
