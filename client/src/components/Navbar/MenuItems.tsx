@@ -6,12 +6,12 @@ export let MenuItems: { name: string, url: string, id: string }[] = [
   },
   {
     name: "Rent",
-    url: "#booking-card",
+    url: "#rent-button",
     id: "2",
   },
   {
     name: "List",
-    url: "#booking-card",
+    url: "#rent-button",
     id: "3",
   },
   {

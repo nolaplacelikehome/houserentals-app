@@ -2,9 +2,10 @@ import React from 'react';
 import "../../../dist/css/FirstSection/FirstSection.css";
 import HomeButtons from '../../components/Buttons/HomeButtons';
 import { useMediaQuery } from 'react-responsive'
-import BookingModal from '../../components/BookingModal/';
+import Modal from '../../components/BookingModal/';
 import frontHome from "../../../assets/front-home.jpg";
 import DesktopCard from '../../components/BookingCard/DesktopCard';
+import BookingModalContent from '../../components/BookingModal/BookingModalContent';
 
 export default function FirstSection() {
 	const [isOpen, setIsOpen] = React.useState(false);
@@ -32,9 +33,9 @@ export default function FirstSection() {
 						isDesktop ?
 						<DesktopCard />
 						:
-						<BookingModal {...modalState} >
-							<input type="text" name="destination" id="destination" placeholder='Where are you going?' />
-						</BookingModal>
+						<Modal {...modalState} >
+							<BookingModalContent />
+						</Modal>
 					}
 				</div>
 			</div>
