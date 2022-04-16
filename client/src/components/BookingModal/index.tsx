@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect } from 'react'
 import "../../../dist/css/BookingModal/Modal.css";
 import ModalPortal from './ModalPortal';
 import { useMediaQuery } from 'react-responsive';
@@ -30,24 +30,23 @@ type ModalProps = {
 export default function Modal({ children, isOpen, handleClose }: ModalProps) {
 	if (!isOpen) return null;
 
-	const isDesktop = useMediaQuery({
-    query: '(min-width: 1200px)'
+	const modalCardRef = React.useRef<HTMLDivElement>(null);
+
+	const isTablet = useMediaQuery({
+    query: '(min-width: 576px)'
   })
 
-	useLayoutEffect(() => {
-		const modalCardElement = document.getElementById('modal-card') as HTMLElement;
-		console.log(modalCardElement);
+	useEffect(() => {
+		const clickOff = (e: MouseEvent) => e.target !== modalCardRef.current ? handleClose() : null;
+		const tapOff = (e: TouchEvent) => e.target !== modalCardRef.current ? handleClose() : null;
 		
-		const clickOff = (e: MouseEvent) => e.target !== modalCardElement ? handleClose() : null;
-		const tapOff = (e: TouchEvent) => e.target !== modalCardElement ? handleClose() : null;
-		
-		if (isDesktop) {
+		if (isTablet) {
 			document.body.addEventListener("click", clickOff);
 		} else {
 			document.body.addEventListener("touchstart", tapOff);
 		}
 		return () => {
-			isDesktop ? document.body.removeEventListener("click", clickOff) : document.body.removeEventListener("touchstart", tapOff);
+			isTablet ? document.body.removeEventListener("click", clickOff) : document.body.removeEventListener("touchstart", tapOff);
 		}
 	}, [handleClose]);
 
@@ -58,6 +57,7 @@ export default function Modal({ children, isOpen, handleClose }: ModalProps) {
 						initial="closed"
 						animate="open"
 						variants={modalVariant}
+						ref={modalCardRef}
 					>
 						{React.cloneElement(children as React.ReactElement, { closeModal: handleClose })}
 					</motion.div>
