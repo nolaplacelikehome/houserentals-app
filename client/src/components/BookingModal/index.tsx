@@ -53,7 +53,7 @@ export default function Modal({ children, isOpen, handleClose }: ModalProps) {
 	return (
 		<ModalPortal wrapperId='portal-wrapper'>
 				<div className="modal">
-					<motion.div className="modal-card" id="modal-card"
+					<motion.div className="modal-card"
 						initial="closed"
 						animate="open"
 						variants={modalVariant}
