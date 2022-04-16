@@ -1,7 +1,7 @@
 import React from 'react';
 import "../../../dist/css/FirstSection/FirstSection.css";
 import HomeButtons from '../../components/Buttons/HomeButtons';
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 import Modal from '../../components/BookingModal/';
 import frontHome from "../../../assets/front-home.jpg";
 import DesktopCard from '../../components/BookingCard/DesktopCard';
@@ -34,7 +34,7 @@ export default function FirstSection() {
 						<DesktopCard />
 						:
 						<Modal {...modalState} >
-							<BookingModalContent />
+							<BookingModalContent {...modalState} />
 						</Modal>
 					}
 				</div>

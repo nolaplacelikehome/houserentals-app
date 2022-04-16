@@ -2,9 +2,14 @@
 	display: inline-block;
 }
 
+.back-icon {
+	display: inline-block;
+}
+
 input[name=destination] {
 	color: black;
 	border-radius: 25px;
+	margin-left: 10px;
 	height: 46px;
 	border: none;
 	box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
