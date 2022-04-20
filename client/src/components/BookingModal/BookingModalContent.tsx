@@ -4,10 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { ModalContext } from '../../containers/HomePage';
 
-type BookingModalProps = {
-	handleClose: () => void,
-}
-
 const properties = [
 	{
 		name: "home1",

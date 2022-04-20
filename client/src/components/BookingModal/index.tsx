@@ -31,24 +31,6 @@ export default function Modal({ children }: ModalProp) {
 
 	const modalCardRef = React.useRef<HTMLDivElement>(null);
 
-	const isTablet = useMediaQuery({
-    query: '(min-width: 576px)'
-  })
-
-	useEffect(() => {
-		const clickOff = (e: MouseEvent) => e.target !== modalCardRef.current ? modalContext?.handleClose() : null;
-		const tapOff = (e: TouchEvent) => e.target !== modalCardRef.current ? modalContext?.handleClose() : null;
-		
-		if (isTablet) {
-			document.body.addEventListener("click", clickOff);
-		} else {
-			document.body.addEventListener("touchstart", tapOff);
-		}
-		return () => {
-			isTablet ? document.body.removeEventListener("click", clickOff) : document.body.removeEventListener("touchstart", tapOff);
-		}
-	}, [modalContext?.handleClose]);
-
 	if (!modalContext?.isOpen) return null;
 
 	return (
@@ -60,7 +42,7 @@ export default function Modal({ children }: ModalProp) {
 						variants={modalVariant}
 						ref={modalCardRef}
 					>
-						{React.cloneElement(children as React.ReactElement, { closeModal: modalContext.handleClose })}
+						{children}
 					</motion.div>
 				</div>
 		</ModalPortal>
