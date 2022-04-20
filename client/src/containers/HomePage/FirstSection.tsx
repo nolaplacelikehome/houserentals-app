@@ -6,19 +6,23 @@ import Modal from '../../components/BookingModal/';
 import frontHome from "../../../assets/front-home.jpg";
 import DesktopCard from '../../components/BookingCard/DesktopCard';
 import BookingModalContent from '../../components/BookingModal/BookingModalContent';
+import { ModalContext } from '../HomePage';
 
 export default function FirstSection() {
-	const [isOpen, setIsOpen] = React.useState(false);
+	const modalContext = React.useContext(ModalContext);
 
 	const isDesktop = useMediaQuery({
     query: '(min-width: 1200px)'
   })
 
-	const modalState = {
-		isOpen,
-		handleClose: () => setIsOpen(false),
-	};
-	
+	const handleClick = () => {
+		if (modalContext) {
+			return modalContext.handleClose();
+		} else {
+			return new Error("Callback method is undefined");
+		}
+	}
+
 	return (
 		<div className="first-section-container" id="home">
 			<div className="introduction-container">
@@ -27,14 +31,14 @@ export default function FirstSection() {
 					Welcome to home rentals! Whether you're renting or listing a home,
 					we're here to help you. 
 				</div>
-				<HomeButtons onClick={() => setIsOpen(!isOpen)} />
+				<HomeButtons onClick={handleClick} />
 				<div className='desktop-card'>
 					{
 						isDesktop ?
 						<DesktopCard />
 						:
-						<Modal {...modalState} >
-							<BookingModalContent {...modalState} />
+						<Modal>
+							<BookingModalContent />
 						</Modal>
 					}
 				</div>

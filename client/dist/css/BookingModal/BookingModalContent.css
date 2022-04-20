@@ -1,9 +1,9 @@
-.modal-search {
-  display: inline-block;
-}
-
-.back-icon {
-  display: inline-block;
+.top-modal {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  align-items: center;
+  margin-left: 25px;
 }
 
 input[name=destination] {
@@ -23,6 +23,10 @@ input[name=destination]::placeholder {
   color: black;
   font-weight: bold;
   padding-left: 5px;
+}
+
+.properties-list li {
+  list-style: none;
 }
 
 /*# sourceMappingURL=BookingModalContent.css.map */

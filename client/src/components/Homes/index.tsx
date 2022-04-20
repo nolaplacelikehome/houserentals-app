@@ -4,6 +4,8 @@ import Homeimg from "../../../assets/Homes.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed } from '@fortawesome/free-solid-svg-icons'
 import { faBath } from '@fortawesome/free-solid-svg-icons';
+import { useMediaQuery } from 'react-responsive';
+import { ModalContext } from '../../containers/HomePage';
 
 type HomeProps = {
 	name: string,
@@ -15,6 +17,20 @@ type HomeProps = {
 
 export default function Homes(props: HomeProps) {
 	const { name, dailyPrice, monthlyPrice, bedrooms, bathrooms } = props;
+
+	const modalContext = React.useContext(ModalContext);
+	
+	const isDesktop = useMediaQuery({
+    query: '(min-width: 1200px)'
+  })
+
+	const handleClick = () => {
+		if (!isDesktop && modalContext) {
+			modalContext.handleClose();
+		} else {
+			return console.log('This is desktop');
+		}
+	};
 
 	return (
 		<div className='individual-home'>
@@ -39,7 +55,7 @@ export default function Homes(props: HomeProps) {
 					<h6 className="home-info">{bathrooms}</h6>
 				</span>
 			</div>
-			<button className="rent-button">Rent Now</button>
+			<button className="rent-button" onClick={handleClick}>Rent Now</button>
 		</div>
 	)
 }
