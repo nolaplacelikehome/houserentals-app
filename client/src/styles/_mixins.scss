@@ -16,6 +16,10 @@ $breakpoint-desktop: 1600px;
   @media screen and (min-width: $breakpoint-tablet) { @content; }
 }
 
+@mixin card-target {
+  @media screen and (min-width: 1380px) { @content; }
+}
+
 @mixin for-large-only {
   @media screen and (min-width: $breakpoint-desktop) { @content; }
 }

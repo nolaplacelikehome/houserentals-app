@@ -36,29 +36,33 @@ export default function DesktopCard() {
 
 	return (
 		<div className='booking-card' id='booking-card'>
-			<div className="destination-container">
-				<span className='calendar-icon'><FontAwesomeIcon icon={faEarthAmerica} /></span>
-				<input
-					type="text" 
-					placeholder='Destination' 
-					value={destination} 
-					onChange={e => setDestination(e.target.value)} className="destination" />
-			</div>
-			<div className="item-container">
-				<span className='calendar-icon'><FontAwesomeIcon icon={faCalendarAlt} /></span>
-				<span className="start-date" onClick={onStartClick}>Starting Date</span>
-				<div className="start-calendar">
-					{startCalendar && <Calendar value={startDate} onChange={setStartDate} />}
+			<div className="container-left">
+				<div className="destination-container">
+					<span className='calendar-icon'><FontAwesomeIcon icon={faEarthAmerica} /></span>
+					<input
+						type="text" 
+						placeholder='Destination' 
+						value={destination} 
+						onChange={e => setDestination(e.target.value)} className="destination" />
+				</div>
+				<div className="item-container">
+					<span className='calendar-icon'><FontAwesomeIcon icon={faCalendarAlt} /></span>
+					<span className="start-date" onClick={onStartClick}>Depart</span>
+					<div className="start-calendar">
+						{startCalendar && <Calendar value={startDate} onChange={setStartDate} />}
+					</div>
+				</div>
+				<div className="item-container">
+					<span className='calendar-icon'><FontAwesomeIcon icon={faCalendarAlt} /></span>
+					<span className="end-date" onClick={onEndClick} >Return</span>
+					<div className="end-calendar">
+						{returnCalendar && <Calendar value={endDate} onChange={setEndDate} />}
+					</div>
 				</div>
 			</div>
-			<div className="item-container">
-				<span className='calendar-icon'><FontAwesomeIcon icon={faCalendarAlt} /></span>
-				<span className="end-date" onClick={onEndClick} >Return Date</span>
-				<div className="end-calendar">
-					{returnCalendar && <Calendar value={endDate} onChange={setEndDate} />}
-				</div>
+			<div className='container-right'>
+				<BookingButton />
 			</div>
-			<BookingButton />
 		</div>
 	)
 }

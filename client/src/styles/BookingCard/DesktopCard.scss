@@ -2,15 +2,22 @@
 
 .booking-card {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	font-size: small;
 	border-radius: 6px;
 	padding: 30px 11px;
 	background-color: white;
 	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	@include query.for-large-only {
-		justify-content: center;
+	
+	.container-left {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	.container-right {
+		@extend .container-left;
 	}
 
 	.item-container {
@@ -18,9 +25,9 @@
 		position: relative;
 		margin-right: 20px;
 		transition: all;
-	
+	}
 
-		.calendar-icon {
+	.calendar-icon {
 			font-size: small;
 			margin-right: 10px;
 			@include query.for-tablet-only {
@@ -28,29 +35,36 @@
 			}
 		}
 
-		.start-date {
-			margin-right: 8px;
-			cursor: pointer;
-			-webkit-tap-highlight-color: transparent;
-			@include query.for-tablet-only {
-				font-size: large;
-				margin-right: 10px;
-			}
+	.start-date {
+		margin-right: 8px;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		@include query.for-tablet-only {
+			font-size: large;
+			margin-right: 10px;
 		}
+		@include query.card-target {
+			margin-right: 50px;
+		}
+	}
 
-		.end-date {
-			margin-right: 5px;
-			cursor: pointer;
-			-webkit-tap-highlight-color: transparent;
-			@include query.for-tablet-only {
-				font-size: large;
-				margin-right: 10px;
-			}
+	.end-date {
+		margin-right: 5px;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		@include query.for-tablet-only {
+			font-size: large;
+			margin-right: 10px;
 		}
 	}
 
 	.destination-container {
 		@extend .item-container;
+		width: 150px;
+		@include query.card-target {
+			width: 170px;
+		}
+		
 		input {
 			color: black;
 			border: none;

@@ -12,11 +12,6 @@ const homes = [
 		<Home name={"Our home"} dailyPrice={"83"} monthlyPrice={"2500"} bedrooms={"4"} bathrooms={"2"} />,
 		];
 
-type ModalProps = {
-	isOpen: boolean,
-	handleClose: () => void,
-}
-
 export default function HousesList() {
 	const [current, setCurrent] = React.useState(0);
 
