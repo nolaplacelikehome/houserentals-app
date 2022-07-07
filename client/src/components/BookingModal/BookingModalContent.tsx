@@ -6,17 +6,9 @@ import { ModalContext } from '../../containers/HomePage';
 
 const properties = [
 	{
-		name: "home1",
+		name: "",
 		key: "1"
-	},
-	{
-		name: "home2",
-		key: "2"
-	},
-	{
-		name: "home3",
-		key: "3"
-	},
+	}
 ];
 
 export default function BookingModalContent() {
@@ -47,12 +39,15 @@ export default function BookingModalContent() {
 					placeholder='Where are you going?'
 				/>
 			</div>
-			<div className="properties-list">
-				<ul>
-					{properties.map((property) => 
-						<li key={property.key}>{property.name}</li>
-					)}
-				</ul>
+			<div className='bottom-modal'>
+				<button>Search</button>
+				<div className="properties-list">
+					<ul>
+						{properties.map((property) => 
+							<li key={property.key}>{property.name}</li>
+						)}
+					</ul>
+				</div>
 			</div>
 		</>
 	)
